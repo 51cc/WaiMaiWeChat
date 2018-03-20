@@ -1,0 +1,27 @@
+<view class='contain'>
+  <scroll-view scroll-y style='width:750rpx;height:100%;'>
+    <block wx:for="{{dataAy}}">
+      <view class='w_order_cell' bindtap='jumptodetail'>
+        <view class='w_order_up_style'>
+
+          <view class='w_order_up_left_style'>
+            <image></image>
+            <view>
+                <text style='font-size:32rpx;color#444444;'>好波斯牛排山大路店</text>
+                <text style='font-size:28rpx;color#999999;'>2017-09-22 15:33</text>
+
+            </view>
+          </view>
+          <text class='state_style'>待付款</text>
+        </view>
+        <view class='w_order_middle_style'>
+          <text style='color:#999999;'>黯然销毁叉烧饭+排骨</text>
+          <text style='color:#444444;'>数量：3  实付：28</text>
+        </view>
+        <view class='w_order_down_style'>
+            <text>取消</text>
+        </view>
+      </view>
+    </block>  
+  </scroll-view>
+</view>

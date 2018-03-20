@@ -1,0 +1,218 @@
+<view class='contain'>
+        <view class='w_row_style' style='position:fixed;top:0;left:0;background:#b39ddb;'>
+            <view class='w_row_left_style'>
+              <image style='border:1rpx solid #ffffff;'></image>
+            </view>
+            <view class='w_row_right_style' style='background:#b39ddb;'>
+              <view class='w_row_right_up_style'>
+                 <text style='color:#ffffff;'>豪博斯牛排（山大路店）</text>
+              </view>
+              <view class='w_row_right_middle_style'>
+                <text style='text-align:left;color:#ffffff;'>月售12345份</text>
+                <!-- <text style='text-align:right;color:#ffffff;'>710m</text> -->
+              </view>
+
+               <view class='w_row_right_up_style'>
+                 <text style="font-size:28rpx;color:#ffffff;">¥20起送 | 配送费¥4</text>
+              </view>
+            </view>
+        </view>
+
+
+
+    <view style='position:fixed;top:210rpx;left:0;z-index:988;' class='client_category_class' wx:if="{{categoryAy.length>0}}">
+    <block wx:for="{{categoryAy}}">
+      <block wx:if="{{item.sec==1}}">
+        <text style='color:#ff0000;border-bottom:1rpx solid #ff0000;'>{{item.name}}</text>
+      </block>
+      <block wx:else>
+        <text id="{{item.id}}" data-type="{{item.type}}" bindtap='selectIndex' style='color:#333333;border-bottom:0;'>{{item.name}}</text>
+      </block>
+    </block>
+  </view>
+
+<!--height:{{winHeight - 31}}px  -->
+<swiper style='position: fixed;top:290rpx;left:0;width:750rpx;height:76%;'  current="{{currentNum}}" bindchange="scroll">
+  <block wx:for="{{sAy}}" wx:for-index="idx">
+    <swiper-item wx:if="{{idx==0}}">
+      <view style='width:750rpx;height:100%;'>
+
+        <view style='display:flex;width:750rpx;height:90%;'>
+            
+            <scroll-view scroll-y="true" style='width:180rpx;height:100%;'>
+              <block wx:for="{{fenleiAy}}" wx:for-index="idx">
+                <view style='border-bottom:1rpx solid #eeeeee;background:#ffffff;with:180rpx;height:100rpx;text-align:center;font-size:24rpx;line-height:100rpx;' wx:if="{{idx==0}}">
+                热销
+                </view>
+                <view style='border-bottom:1rpx solid #eeeeee;background:#f6f6f6;with:180rpx;height:100rpx;text-align:center;text-align:center;font-size:24rpx;line-height:100rpx;' wx:elif="{{idx!=0}}">
+                超值套餐
+                </view>
+              </block>
+             </scroll-view>            
+
+
+            <scroll-view scroll-y="true" style='width:570rpx;height:100%;'>
+              <text style="font-size:28rpx;margin:15rpx;color:#444444;">热销</text>
+                <block wx:for="{{prods}}">
+                  <view class="pro_cell_style">
+                    <view class='pro_left_style'>
+                      <image style='width:100%;height:100%;background:red;'></image>
+                    </view>
+                    <view class='pro_right_style'>
+                      <view class='pro_right_up_style'>
+                      <text>销魂排骨+米饭</text>
+                      </view>
+                      <view class='pro_right_middle_style'>
+                      <text>月销1234份</text>
+                      </view>
+                      <view class='pro_right_down_style'>
+
+                        <view class='pro_right_down_left_style'>
+                          <text style='color:red;font-size:34rpx;text-align:left;'>¥88</text>
+                          <text style='color:#999999;font-size:24rpx;text-align:left;text-decoration:line-through;'>10</text>
+                        </view>
+
+                        <view class='pro_right_down_right_style'>
+                          <image src='../../Asset/plus.png'></image>
+                          <text>123</text>
+                          <image bindtap='addNum' src='../../Asset/add.png'></image>
+                        </view>
+                      </view>
+
+                    </view>
+                  </view>
+              </block>
+
+            </scroll-view>            
+        </view>
+
+        <view style='height:10%;width:750rpx;background:#eeeeee;display:flex;position:relative;z-index:9999;justify-content:space-between;'>
+          <view class='gwc_style' wx:if="{{sumNum>0}}" bindtap='showdetail'>
+            <text>{{sumNum}}</text>
+            <image src='../../Asset/gouwuche_cai.png'></image>
+          </view>
+           <view class='gwc_style' wx:else>
+            <image src='../../Asset/gouwuche.png'></image>
+          </view>
+
+          <view class='fy_style'>
+            <text>另需配送费122元</text>
+          </view>
+          <view class='js_style' bindtap='jumptosuborder'>
+            <text>20元起送</text>
+          </view>
+        </view>
+
+      </view>
+
+     
+
+     
+    </swiper-item>
+
+
+
+    <swiper-item wx:elif="{{idx==1}}">
+      <view style='width:750rpx;height:100%;'>
+          <scroll-view scroll-y="true" style='width:750rpx;height:100%;'>
+              <block wx:for="{{comments}}">
+                <view class='comment_style'>
+                    <view class='comment_left_style'>
+                         <image style='border-radius:50%;background:red;width:100%;height:100%;'></image>
+                    </view>
+
+                    <view class='comment_right_style'>
+                      <view class='comment_right_up_style'>
+                        <text style='text-align:left;font-size:32rpx;color:#444444;'>骑着蜗牛狂奔</text>
+                        <text style='text-align:right;font-size:24rpx;color:#999999;'>2017.5.22</text>
+                      </view>
+
+                      <text class='content_text_style'>楚河汉界日当午汗滴和稀土谁知盘中餐i 理解新环境家里打开手机就邓丽君卡上的</text>
+                    </view>
+                </view>
+              </block>
+          </scroll-view>
+      </view>
+    </swiper-item>
+
+
+
+    <swiper-item wx:elif="{{idx==2}}">
+      <view style='width:750rpx;background:#f5f5f5;'>
+
+        <view class='sub_order_head' style='margin-top:0rpx;'>
+            <view class='left_style' style='border-bottom:1px solid #eeeeee;width:710rpx;display:flex;'>
+              <image style='width:40rpx;height:40rpx;margin:35rpx 20rpx;' src='../../Asset/w_phone.png'></image>
+              <text>18615196620</text>
+            </view>
+        </view>
+
+
+        <view class='sub_order_head' style='margin-bottom:0rpx;'>
+            <view class='left_style' style='border-bottom:1px solid #eeeeee;width:710rpx;display:flex;'>
+              <image style='width:40rpx;height:40rpx;margin:35rpx 20rpx;' src='../../Asset/w_adrss.png'></image>
+              <text>济南历下山大路47号数码港大厦B901</text>
+            </view>
+        </view>
+
+
+          <view class='sub_order_head' style='margin-top:20rpx;'>
+              <view class='left_style' style='border-bottom:1px solid #eeeeee;width:710rpx;display:flex;'>
+                <image style='width:40rpx;height:40rpx;margin:35rpx 20rpx;' src='../../Asset/w_nps.png'></image>
+                <text>配送服务：支持门店自提</text>
+              </view>
+          </view>
+      </view>
+    </swiper-item>
+
+
+
+  </block>
+</swiper>
+
+
+
+</view>
+
+
+<view class='motai_style' wx:if="{{show}}">
+   
+    <view class='motai_content_style'>
+      <view class='motai_up_style'>
+        <text>清空购物车</text>
+        <image src='../../Asset/shopcar_delete.png'></image>
+        <view style='position: absolute;left:20rpx;top:-90rpx;' class='gwc_style' wx:if="{{sumNum>0}}" bindtap='hiddenview'>
+          <text>{{sumNum}}</text>
+          <image src='../../Asset/gouwuche_cai.png'></image>
+        </view>
+
+      </view>
+
+      <view class='motai_middle_style'>
+        <scroll-view scroll-y style='max-height: 400rpx;'>
+          <block wx:for="{{yidianAy}}">
+              <view class='yd_pro_style'>
+                <text class='caiming'>黯然销毁排骨+米饭</text>
+                <text class='jiage'>¥88</text>
+                <view class='pro_right_down_right_style' style='margin-top:30rpx;'>
+                  <image src='../../Asset/plus.png'></image>
+                  <text>123</text>
+                  <image src='../../Asset/add.png'></image>
+                </view>
+              </view>
+          </block>
+        </scroll-view>
+      </view>
+
+      <view class='motai_down_style'>
+          <view class='motai_left_style'>
+              <text class='m_up_price_style'>¥12</text>
+              <text class='m_down_price_style'>另需配送费4元</text>
+          </view>
+          <view class='js_style'>
+            <text>还差4元</text>
+          </view>
+      </view>
+    </view>
+</view>
+

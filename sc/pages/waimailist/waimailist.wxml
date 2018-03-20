@@ -1,0 +1,38 @@
+<view class='contain'>
+  <view style='position:absolute;top:80rpx;left:0;'>
+    <scroll-view scroll-y="true">
+      <block wx:for="{{dataAy}}">
+        <view class='w_row_style' bindtap='jumptodetail'>
+            <view class='w_row_left_style'>
+              <image ></image>
+            </view>
+            <view class='w_row_right_style'>
+              <view class='w_row_right_up_style'>
+                 <text>豪博斯牛排（山大路店）</text>
+              </view>
+              <view class='w_row_right_middle_style'>
+                <text style='text-align:left;color:#444444;'>月售12345份</text>
+                <text style='text-align:right;color:#999999;'>710m</text>
+              </view>
+
+               <view class='w_row_right_up_style'>
+                 <text style="font-size:28rpx;color:#999999;">¥20起送 | 配送费¥4</text>
+              </view>
+            </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+
+   <view style='position:fixed;top:0;left:0;' class='client_category_class' wx:if="{{categoryAy.length>0}}">
+    <block wx:for="{{categoryAy}}">
+      <block wx:if="{{item.sec==1}}">
+        <text style='color:#ff0000;'>{{item.name}}</text>
+      </block>
+      <block wx:else>
+        <text id="{{item.id}}" data-type="{{item.type}}" bindtap='selectIndex' style='color:#333333;'>{{item.name}}</text>
+      </block>
+    </block>
+  </view>
+</view>

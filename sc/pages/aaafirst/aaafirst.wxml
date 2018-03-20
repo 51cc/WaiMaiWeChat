@@ -1,0 +1,5 @@
+<!--外卖  -->
+
+<view style='width:750rpx;height:100rpx;'>
+    <text  bindtap='jumptowaimailist'>点击外卖</text>
+</view>

@@ -1,0 +1,54 @@
+/* pages/waimailist/waimailist.wxss */
+@import "../newclientlist/newclientlist.wxss";
+
+.contain{
+  background: #f5f5f5;
+}
+.w_row_style{
+  width: 750rpx;
+  height: 210rpx;
+  background: white;
+  border-bottom: 1rpx solid #eeeeee;
+  display: flex;
+}
+.w_row_left_style{
+  margin: 30rpx 20rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+.w_row_left_style>image{
+  width: 100%;
+  height: 100%;
+  background: red;
+}
+.w_row_right_style{
+  width: 540rpx;
+  height: 150rpx;
+  margin-top: 30rpx;
+  background: white;
+}
+
+.w_row_right_up_style{
+  height: 50rpx;
+  width: 540rpx;
+}
+.w_row_right_up_style>text{
+  display: block;
+  line-height: 50rpx;
+  height: 50rpx;
+  text-align: left;
+  font-size: 32rpx;
+}
+
+.w_row_right_middle_style{
+  display: flex;
+  height: 50rpx;
+  width: 540rpx;
+}
+.w_row_right_middle_style>text{
+  width: 270rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  display: block;
+}

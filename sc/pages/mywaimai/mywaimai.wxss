@@ -1,0 +1,80 @@
+/* pages/mywaimai/mywaimai.wxss */
+page{
+  background: #f5f5f5;
+}
+.w_order_cell{
+  height: 380rpx;
+  width: 750rpx;
+  margin-bottom: 20rpx;
+  background: #ffffff;
+}
+.w_order_up_style{
+  height: 120rpx;
+  width: 750rpx;
+  border-bottom: 1rpx solid #eeeeee;
+  display: flex;
+}
+.w_order_up_left_style{
+  height: 80rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  width: 600rpx;
+  display: flex;
+}
+.w_order_up_left_style>image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  background: red;
+}
+.w_order_up_left_style>view{
+  margin-left: 20rpx;
+  width: 500rpx;
+  height: 80rpx;
+}
+.w_order_up_left_style>view>text{
+  width: 520rpx;
+  height: 40rpx;
+  display: block;
+  text-align: left;
+}
+.state_style{
+  display: block;
+  width: 110rpx;
+  text-align: right;
+  height: 40rpx;
+  font-size: 32rpx;
+  color: #444444;
+  margin-top: 20rpx;
+}
+.w_order_middle_style{
+  height: 140rpx;
+  width: 750rpx;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.w_order_middle_style>text{
+  display: block;
+  text-align: left;
+  margin: 20rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+}
+.w_order_down_style{
+  height: 120rpx;
+  width: 750rpx;
+  /* border-bottom: 1rpx solid #eeeeee; */
+  position: relative;
+}
+.w_order_down_style>text{
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 110rpx;
+  text-align: center;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #eeeeee;
+}

@@ -1,0 +1,40 @@
+<view>
+ <view class="second" style="background:#f5f5f5;">
+            <view class="sec_right" style="margin:25rpx 15rpx 25rpx 25rpx;width:560rpx;">
+                <image src="../../Asset/f_search.png"></image>
+                <input style="font-size:26rpx;" bindfocus="startsearch"  bindinput="bindKeyInput" value='{{searchText}}' placeholder="输入搜索"/>
+            </view>
+
+            <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="jumptosearchPro" hover-class="other-button-hover" style="color:#444444;background:#eeeeee;line-height:68rpx;font-size:26rpx;margin-top:25rpx;height:68rpx;">搜索</button>
+      </view>  
+  
+  <view class='client_category_class' wx:if="{{categoryAy.length>0}}">
+    <block wx:for="{{categoryAy}}">
+      <block wx:if="{{item.sec==1}}">
+        <text style='color:#ff0000;'>{{item.name}}</text>
+      </block>
+      <block wx:else>
+        <text id="{{item.id}}" data-type="{{item.type}}" bindtap='selectIndex' style='color:#333333;'>{{item.name}}</text>
+      </block>
+    </block>
+  </view>
+
+
+
+  <view>
+    <block wx:for="{{clientsAy}}">
+      <view class='row_style' bindtap='jumptodetail' id="{{item.partnerId}}">
+          <image class='row_img' src='{{item.img}}'></image>
+          <view class='right_row_class'>
+            <view class='right_up_row_class'>
+              <text class='right_text_up_row_class'>{{item.title}}</text>
+              <text class='right_right_text_up_row_class'>{{item.distance}}</text>
+            </view>
+            <text class='address_style'>{{item.address}}</text>
+          </view>
+      </view>
+    </block>
+  </view>
+
+
+</view>

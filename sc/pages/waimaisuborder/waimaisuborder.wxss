@@ -1,0 +1,69 @@
+/* pages/waimaisuborder/waimaisuborder.wxss */
+page{
+  background: #f5f5f5;
+  padding-bottom: 130rpx;
+}
+.contain{
+
+}
+.sub_order_head{
+  display: flex;
+  height: 110rpx;
+  width: 750rpx;
+  background: #ffffff;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.left_style{
+  margin-left: 20rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+}
+.left_style>text{
+  font-size: 32rpx;
+  text-align: left;
+  color: #444444;
+  line-height: 110rpx;
+  height: 110rpx;
+}
+.right_style{
+  display: flex;
+}
+.right_cell_style{
+  width: 205rpx;
+  height: 110rpx;
+  display: flex;
+}
+.right_cell_style>image{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 40rpx 15rpx;
+}
+.right_cell_style>text{
+  font-size: 32rpx;
+  text-align: left;
+  color: #444444;
+  line-height: 110rpx;
+  height: 110rpx;
+}
+
+
+.sub_info_left_style{
+  margin: 25rpx 0 25rpx 20rpx;
+  height: 100rpx;
+  width: 680rpx;
+}
+.sub_info_left_style>text{
+  display: block;
+  width: 680rpx;
+  height: 50rpx;
+  font-size: 32rpx;
+  color: #444444;
+  text-align: left;
+}
+.right_style>input{
+  height: 110rpx;
+  width:410rpx;
+  line-height: 110rpx;
+  text-align: right;
+  font-size: 32rpx;
+}

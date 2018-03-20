@@ -1,0 +1,2 @@
+/* pages/mywaimaidetail/mywaimaidetail.wxss */
+@import "../waimaisuborder/waimaisuborder.wxss";

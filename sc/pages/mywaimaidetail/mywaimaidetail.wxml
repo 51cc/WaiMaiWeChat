@@ -1,0 +1,91 @@
+<view>
+
+<view style="width:750rpx;height:180rpx;font-size:40rpx;color:#444444;line-height:180rpx;text-align:center;background:#ffffff;margin-bottom:20rpx;">
+订单已完成
+</view>
+
+<view class='sub_order_head' style='margin-top:20rpx;'>
+        <view class='left_style' style='border-bottom:1px solid #eeeeee;width:710rpx;display:flex;'>
+          <image style='width:40rpx;height:40rpx;margin:35rpx 20rpx;' src='../../Asset/a_jifen.png'></image>
+          <text>豪博斯牛排（山大路店）</text>
+        </view>
+    </view>
+    <view>
+      <block wx:for="{{proAy}}">
+        <view style='width:710rpx;padding:20rpx;display:flex;background:#ffffff;'>
+          <text style='height:60rpx;line-height:60rpx;width:400rpx;text-align:left;font-size:32rpx;color:#444444;'>黯然销毁米饭+排骨</text>
+          <text style='height:60rpx;line-height:60rpx;width:155rpx;text-align:center;font-size:32rpx;color:#444444;'>x111</text>
+          <text style='height:60rpx;line-height:60rpx;width:155rpx;text-align:right;font-size:32rpx;color:#444444;'>¥888</text>
+        </view>
+      </block>
+    </view>
+
+
+
+
+    <view style="margin-top:1rpx;">
+        <view style='width:710rpx;padding:20rpx;display:flex;background:#ffffff;'>
+          <text style='height:60rpx;line-height:60rpx;width:500rpx;text-align:left;font-size:32rpx;color:#444444;'>餐盒费</text>
+          <text style='height:60rpx;line-height:60rpx;width:210rpx;text-align:right;font-size:32rpx;color:#444444;'>¥888</text>
+        </view>
+
+
+        <view style='width:710rpx;padding:20rpx;display:flex;background:#ffffff;border-bottom:1rpx solid #eeeeee;'>
+          <text style='height:60rpx;line-height:60rpx;width:500rpx;text-align:left;font-size:32rpx;color:#444444;'>配送费</text>
+          <text style='height:60rpx;line-height:60rpx;width:210rpx;text-align:right;font-size:32rpx;color:#444444;'>¥4</text>
+        </view>
+
+        <view style='width:710rpx;padding:20rpx;display:flex;background:#ffffff;border-bottom:1rpx solid #eeeeee;'>
+          <text style='height:60rpx;line-height:60rpx;width:500rpx;text-align:left;font-size:32rpx;color:#444444;'>优惠券</text>
+          <text style='height:60rpx;line-height:60rpx;width:210rpx;text-align:right;font-size:32rpx;color:#ff0000;'>-¥8</text>
+        </view>
+
+        <view style='width:710rpx;padding:20rpx;display:flex;background:#ffffff;'>
+          <text style='height:60rpx;line-height:60rpx;width:400rpx;text-align:left;font-size:32rpx;color:#999999;'>总计：¥28 已优惠¥5</text>
+          <text style='height:60rpx;line-height:60rpx;width:310rpx;text-align:right;font-size:32rpx;color:#ff0000;'><text style="color:#444444;">实付</text>¥23</text>
+        </view>
+
+    </view>
+
+
+
+     <view style="margin-top:20rpx;">
+        <view style='width:710rpx;padding:20rpx;display:flex;background:#ffffff;border-bottom:1rpx solid #eeeeee;'>
+          <text style='height:60rpx;line-height:60rpx;width:180rpx;text-align:left;font-size:32rpx;color:#999999;'>订单号:</text>
+          <text style='height:60rpx;line-height:60rpx;width:510rpx;text-align:left;font-size:32rpx;color:#999999;'>378986899888827272</text>
+        </view>
+
+        <view style='width:710rpx;padding:20rpx;display:flex;background:#ffffff;border-bottom:1rpx solid #eeeeee;'>
+          <text style='height:60rpx;line-height:60rpx;width:180rpx;text-align:left;font-size:32rpx;color:#999999;'>下单时间:</text>
+          <text style='height:60rpx;line-height:60rpx;width:510rpx;text-align:left;font-size:32rpx;color:#999999;'>2017-09-08 12:33</text>
+        </view>
+
+        <view style='width:710rpx;padding:20rpx;display:flex;background:#ffffff;border-bottom:1rpx solid #eeeeee;'>
+          <text style='height:60rpx;line-height:60rpx;width:180rpx;text-align:left;font-size:32rpx;color:#999999;'>取货时间：</text>
+          <text style='height:60rpx;line-height:60rpx;width:510rpx;text-align:left;font-size:32rpx;color:#999999;'>2019-09-08 12:36</text>
+        </view>
+
+        <view style='width:710rpx;padding:20rpx;display:flex;background:#ffffff;border-bottom:1rpx solid #eeeeee;'>
+          <text style='height:60rpx;line-height:60rpx;width:200rpx;text-align:left;font-size:32rpx;color:#999999;'>取货人信息：</text>
+          <text style='height:60rpx;line-height:60rpx;width:510rpx;text-align:left;font-size:32rpx;color:#999999;'>李雨桐 15634883121</text>
+        </view>
+
+        <view style='width:710rpx;padding:20rpx;display:flex;background:#ffffff;border-bottom:1rpx solid #eeeeee;'>
+          <text style='height:60rpx;line-height:60rpx;width:180rpx;text-align:left;font-size:32rpx;color:#999999;'>门店信息：</text>
+          <text style='height:60rpx;line-height:60rpx;width:510rpx;text-align:left;font-size:32rpx;color:#999999;'>洪家楼西路152二楼</text>
+        </view>
+
+        <view style='width:710rpx;padding:20rpx;display:flex;background:#ffffff;border-bottom:1rpx solid #eeeeee;'>
+          <text style='height:60rpx;line-height:60rpx;width:180rpx;text-align:left;font-size:32rpx;color:#999999;'>配送时间：</text>
+          <text style='height:60rpx;line-height:60rpx;width:510rpx;text-align:left;font-size:32rpx;color:#999999;'>立即配送</text>
+        </view>
+
+
+        <view style='width:710rpx;padding:20rpx;display:flex;background:#ffffff;border-bottom:1rpx solid #eeeeee;'>
+          <text style='height:80rpx;line-height:80rpx;width:180rpx;text-align:left;font-size:32rpx;color:#999999;'>收货信息：</text>
+          <text style='height:80rpx;line-height:40rpx;width:510rpx;text-align:left;font-size:32rpx;color:#999999;'>李雨桐  15634883121\n山大路47号数码港大厦B901</text>
+        </view>
+    </view>
+
+    
+</view>
